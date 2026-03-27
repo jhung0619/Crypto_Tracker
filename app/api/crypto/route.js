@@ -26,6 +26,12 @@ export async function GET(request) {
     );
     const historyData = await historyRes.json();
 
+    // Check for API errors
+    if (historyData.error || !historyData.prices || !Array.isArray(historyData.prices)) {
+      console.error('CoinGecko API error:', historyData.error || 'Invalid response');
+      return NextResponse.json({ error: 'Failed to fetch data' }, { status: 500 });
+    }
+
     // Format response
     const prices = historyData.prices.map(([timestamp, price]) => ({
       time: Math.floor(timestamp / 1000),
