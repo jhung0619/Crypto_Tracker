@@ -131,7 +131,14 @@ export default function PriceChart({ coin }) {
   return (
     <div className="bg-gray-800 rounded-xl p-5 border border-gray-700">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-lg font-bold text-white">{coin} Price Chart (365 Days)</h2>
+        <div>
+          <h2 className="text-lg font-bold text-white">{coin} Price Chart (365 Days)</h2>
+          {!loading && !error && (
+            <p className="text-xs text-gray-500 mt-1">
+              Updated: {new Date().toLocaleTimeString()}
+            </p>
+          )}
+        </div>
         <div className="flex gap-3 text-xs">
           <div className="flex items-center gap-1">
             <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
@@ -156,8 +163,12 @@ export default function PriceChart({ coin }) {
           <div className="text-red-400">Failed to load chart data.</div>
         </div>
       ) : loading ? (
-        <div className="w-full h-96 flex items-center justify-center">
-          <div className="text-gray-400">Loading chart...</div>
+        <div className="w-full h-96 bg-gray-900 rounded-lg flex flex-col items-center justify-center">
+          <div className="animate-pulse mb-4">
+            <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+          </div>
+          <p className="text-gray-400 text-sm">Loading historical data...</p>
+          <p className="text-gray-600 text-xs mt-2">This may take 10-15 seconds</p>
         </div>
       ) : (
         <div ref={chartContainerRef} className="w-full"></div>

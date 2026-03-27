@@ -56,21 +56,39 @@ export default function CoinCards({ selectedCoin }) {
   const isPositive = data.change24h >= 0;
 
   return (
-    <div className="grid grid-cols-2 gap-4">
-      {/* Current Price */}
-      <div className="bg-gray-800 rounded-xl p-6 border border-gray-700">
-        <p className="text-xs text-gray-400 mb-2">Current Price</p>
-        <p className="text-3xl font-bold text-white">
-          ${data.price.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
-        </p>
+    <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-6 border border-gray-700 shadow-xl">
+      {/* Price Display */}
+      <div className="flex items-baseline justify-between mb-4">
+        <div>
+          <p className="text-sm text-gray-400 mb-1">Current Price</p>
+          <p className="text-5xl font-bold text-white tracking-tight">
+            ${data.price.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+          </p>
+        </div>
+        <div className="text-right">
+          <p className="text-sm text-gray-400 mb-1">24h Change</p>
+          <p className={`text-3xl font-bold ${isPositive ? "text-green-400" : "text-red-400"}`}>
+            {isPositive ? "↗" : "↘"} {isPositive ? "+" : ""}{data.change24h.toFixed(2)}%
+          </p>
+        </div>
       </div>
 
-      {/* 24h Change */}
-      <div className="bg-gray-800 rounded-xl p-6 border border-gray-700">
-        <p className="text-xs text-gray-400 mb-2">24h Change</p>
-        <p className={`text-3xl font-bold ${isPositive ? "text-green-400" : "text-red-400"}`}>
-          {isPositive ? "+" : ""}{data.change24h.toFixed(2)}%
-        </p>
+      {/* Key Stats Bar */}
+      <div className="grid grid-cols-3 gap-4 pt-4 border-t border-gray-700">
+        <div>
+          <p className="text-xs text-gray-500 mb-1">Volume</p>
+          <p className="text-sm font-semibold text-gray-300">High</p>
+        </div>
+        <div>
+          <p className="text-xs text-gray-500 mb-1">Trend</p>
+          <p className="text-sm font-semibold text-gray-300">
+            {isPositive ? "Bullish" : "Bearish"}
+          </p>
+        </div>
+        <div>
+          <p className="text-xs text-gray-500 mb-1">Status</p>
+          <p className="text-sm font-semibold text-green-400">Live</p>
+        </div>
       </div>
     </div>
   );

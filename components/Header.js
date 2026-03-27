@@ -4,9 +4,13 @@ import { useState, useEffect } from "react";
 
 export default function Header() {
   const [time, setTime] = useState("");
+  const [lastUpdate, setLastUpdate] = useState("");
 
   useEffect(() => {
-    setTime(new Date().toLocaleTimeString());
+    const now = new Date();
+    setTime(now.toLocaleTimeString());
+    setLastUpdate(now.toLocaleString());
+    
     const interval = setInterval(() => {
       setTime(new Date().toLocaleTimeString());
     }, 1000);
@@ -14,6 +18,7 @@ export default function Header() {
   }, []);
 
   const handleRefresh = () => {
+    setLastUpdate(new Date().toLocaleString());
     window.location.reload();
   };
 
@@ -28,13 +33,14 @@ export default function Header() {
           <div className="flex items-center gap-4">
             <button
               onClick={handleRefresh}
-              className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-lg transition-colors"
+              className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-lg transition-colors flex items-center gap-2"
             >
+              <span>↻</span>
               Refresh
             </button>
             <div className="text-right">
               <p className="text-xs text-gray-500">Last updated</p>
-              <p className="text-sm text-gray-300">{time}</p>
+              <p className="text-sm text-gray-300">{lastUpdate || time}</p>
             </div>
           </div>
         </div>
