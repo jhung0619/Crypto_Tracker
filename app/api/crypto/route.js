@@ -19,9 +19,9 @@ export async function GET(request) {
     );
     const priceData = await priceRes.json();
 
-    // Fetch historical data (last 365 days)
+    // Fetch historical data (last 180 days for better performance)
     const historyRes = await fetch(
-      `https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&days=365&interval=daily`,
+      `https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&days=180&interval=daily`,
       { next: { revalidate: 3600 } }
     );
     const historyData = await historyRes.json();
