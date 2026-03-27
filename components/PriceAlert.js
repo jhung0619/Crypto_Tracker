@@ -17,22 +17,22 @@ export default function PriceAlert({ coin, currentPrice, ma30 }) {
       // Price is very close to MA30 (within 0.5%)
       setAlert({
         type: "warning",
-        message: `${coin} is trading near MA30`,
-        detail: `Price: $${currentPrice.toLocaleString()} | MA30: $${ma30.toLocaleString()}`,
+        message: `${coin} near key support`,
+        detail: `Trading at $${currentPrice.toLocaleString()} (MA30: $${ma30.toLocaleString()})`,
       });
     } else if (priceDiff > 0 && percentDiff > 5) {
       // Price significantly above MA30
       setAlert({
         type: "bullish",
-        message: `${coin} above MA30`,
-        detail: `+${percentDiff.toFixed(1)}% above moving average`,
+        message: `${coin} trending strong`,
+        detail: `${percentDiff.toFixed(1)}% above 30-day average`,
       });
     } else if (priceDiff < 0 && percentDiff < -5) {
       // Price significantly below MA30
       setAlert({
         type: "bearish",
-        message: `${coin} below MA30`,
-        detail: `${percentDiff.toFixed(1)}% below moving average`,
+        message: `${coin} under pressure`,
+        detail: `${Math.abs(percentDiff).toFixed(1)}% below 30-day average`,
       });
     } else {
       setAlert(null);

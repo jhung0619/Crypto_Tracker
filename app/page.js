@@ -10,6 +10,7 @@ import SentimentSummary from "@/components/SentimentSummary";
 import NewsFeed from "@/components/NewsFeed";
 import MovingAverages from "@/components/MovingAverages";
 import PriceAlert from "@/components/PriceAlert";
+import Disclaimer from "@/components/Disclaimer";
 
 export default function Home() {
   const [selectedCoin, setSelectedCoin] = useState("BTC");
@@ -67,6 +68,9 @@ export default function Home() {
         
         {/* News Feed */}
         <NewsFeed coin={selectedCoin} />
+
+        {/* Disclaimer */}
+        <Disclaimer />
       </main>
     </div>
   );
