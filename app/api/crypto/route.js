@@ -48,8 +48,6 @@ export async function GET(request) {
       prices,
       ma30: calculateMA(prices, 30),
       ma90: calculateMA(prices, 90),
-      ma240: calculateMA(prices, 240),
-      ma365: calculateMA(prices, 365),
     });
   } catch (error) {
     console.error('CoinGecko API error:', error);
