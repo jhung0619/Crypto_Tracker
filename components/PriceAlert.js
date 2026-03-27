@@ -42,20 +42,31 @@ export default function PriceAlert({ coin, currentPrice, ma30 }) {
   if (!alert || dismissed) return null;
 
   const colors = {
-    warning: "bg-yellow-900/50 border-yellow-600 text-yellow-200",
-    bullish: "bg-green-900/50 border-green-600 text-green-200",
-    bearish: "bg-red-900/50 border-red-600 text-red-200",
+    warning: "bg-yellow-600 border-yellow-500 text-white shadow-yellow-900/50",
+    bullish: "bg-green-600 border-green-500 text-white shadow-green-900/50",
+    bearish: "bg-red-600 border-red-500 text-white shadow-red-900/50",
+  };
+
+  const icons = {
+    warning: "⚠️",
+    bullish: "📈",
+    bearish: "📉",
   };
 
   return (
-    <div className={`rounded-xl p-4 border ${colors[alert.type]} mb-4 flex items-start justify-between`}>
-      <div className="flex-1">
-        <p className="font-semibold mb-1">{alert.message}</p>
-        <p className="text-sm opacity-90">{alert.detail}</p>
+    <div
+      className={`rounded-2xl p-6 border-2 ${colors[alert.type]} mb-6 flex items-start justify-between shadow-2xl animate-pulse-slow`}
+    >
+      <div className="flex items-start gap-4 flex-1">
+        <span className="text-4xl">{icons[alert.type]}</span>
+        <div className="flex-1">
+          <p className="text-xl font-bold mb-2">{alert.message}</p>
+          <p className="text-base opacity-95">{alert.detail}</p>
+        </div>
       </div>
       <button
         onClick={() => setDismissed(true)}
-        className="ml-4 text-gray-400 hover:text-white"
+        className="ml-4 text-white hover:text-gray-200 text-2xl font-bold"
       >
         ✕
       </button>

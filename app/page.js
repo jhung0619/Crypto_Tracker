@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Header from "@/components/Header";
+import SignalDashboard from "@/components/SignalDashboard";
 import CoinSelector from "@/components/CoinSelector";
 import CoinCards from "@/components/CoinCards";
 import PriceChart from "@/components/PriceChart";
@@ -37,10 +38,10 @@ export default function Home() {
       <Header />
       
       <main className="max-w-7xl mx-auto px-4 py-6 space-y-6">
-        {/* Coin Selector */}
-        <CoinSelector selected={selectedCoin} onSelect={setSelectedCoin} />
-        
-        {/* Price Alert */}
+        {/* Signal Dashboard - Top Priority */}
+        <SignalDashboard />
+
+        {/* Price Alert - Prominent */}
         {priceData && maData && (
           <PriceAlert
             coin={selectedCoin}
@@ -48,6 +49,9 @@ export default function Home() {
             ma30={maData.ma30}
           />
         )}
+
+        {/* Coin Selector */}
+        <CoinSelector selected={selectedCoin} onSelect={setSelectedCoin} />
         
         {/* Coin Overview Cards */}
         <CoinCards selectedCoin={selectedCoin} />
