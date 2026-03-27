@@ -19,9 +19,9 @@ export async function GET(request) {
     );
     const priceData = await priceRes.json();
 
-    // Fetch historical data (last 180 days for better performance)
+    // Fetch historical data (365 days - CoinGecko free tier max)
     const historyRes = await fetch(
-      `https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&days=180&interval=daily`,
+      `https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&days=365&interval=daily`,
       { next: { revalidate: 3600 } }
     );
     const historyData = await historyRes.json();
@@ -48,6 +48,8 @@ export async function GET(request) {
       prices,
       ma30: calculateMA(prices, 30),
       ma90: calculateMA(prices, 90),
+      ma240: calculateMA(prices, 240),
+      ma365: calculateMA(prices, 365),
     });
   } catch (error) {
     console.error('CoinGecko API error:', error);
