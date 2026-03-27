@@ -6,6 +6,7 @@ export default function PriceChart({ coin }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [data, setData] = useState(null);
+  const [selectedBar, setSelectedBar] = useState(null);
 
   useEffect(() => {
     async function loadData() {
@@ -101,20 +102,34 @@ export default function PriceChart({ coin }) {
         {heights.map((height, i) => (
           <div
             key={i}
-            className="flex-1 bg-blue-500 rounded-t transition-all hover:bg-blue-400 active:bg-blue-300 cursor-pointer"
+            className={`flex-1 rounded-t transition-all cursor-pointer ${
+              selectedBar === i ? 'bg-blue-300' : 'bg-blue-500 hover:bg-blue-400'
+            }`}
             style={{ height: `${height}%`, minHeight: '2px' }}
             title={`$${Math.round(data.prices[i].value).toLocaleString()}`}
-            onClick={(e) => {
-              const price = `$${Math.round(data.prices[i].value).toLocaleString()}`;
-              const dayAgo = 30 - i;
-              alert(`${dayAgo} days ago: ${price}`);
-            }}
+            onClick={() => setSelectedBar(selectedBar === i ? null : i)}
+            onMouseEnter={() => setSelectedBar(i)}
+            onMouseLeave={() => setSelectedBar(null)}
           />
         ))}
       </div>
 
-      <div className="mt-4 text-xs text-gray-500 text-center">
-        Desktop: hover over bars | Mobile: tap a bar
+      {/* Mobile-friendly price display */}
+      <div className="mt-4 text-center">
+        {selectedBar !== null ? (
+          <div className="inline-block bg-gray-700 px-4 py-2 rounded-lg">
+            <p className="text-xs text-gray-400">
+              {30 - selectedBar} day{30 - selectedBar !== 1 ? 's' : ''} ago
+            </p>
+            <p className="text-lg font-semibold text-blue-400">
+              ${Math.round(data.prices[selectedBar].value).toLocaleString()}
+            </p>
+          </div>
+        ) : (
+          <p className="text-xs text-gray-500">
+            Tap or hover over bars to see price
+          </p>
+        )}
       </div>
     </div>
   );
