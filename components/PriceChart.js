@@ -101,15 +101,20 @@ export default function PriceChart({ coin }) {
         {heights.map((height, i) => (
           <div
             key={i}
-            className="flex-1 bg-blue-500 rounded-t transition-all hover:bg-blue-400"
+            className="flex-1 bg-blue-500 rounded-t transition-all hover:bg-blue-400 active:bg-blue-300 cursor-pointer"
             style={{ height: `${height}%`, minHeight: '2px' }}
             title={`$${Math.round(data.prices[i].value).toLocaleString()}`}
+            onClick={(e) => {
+              const price = `$${Math.round(data.prices[i].value).toLocaleString()}`;
+              const dayAgo = 30 - i;
+              alert(`${dayAgo} days ago: ${price}`);
+            }}
           />
         ))}
       </div>
 
       <div className="mt-4 text-xs text-gray-500 text-center">
-        Hover over bars to see price
+        Desktop: hover over bars | Mobile: tap a bar
       </div>
     </div>
   );
