@@ -6,7 +6,23 @@ const config: CapacitorConfig = {
   webDir: 'public',
   server: {
     url: 'https://crypto-tracker-kappa-tan.vercel.app',
-    cleartext: true
+    cleartext: false, // HTTPS only for production
+    androidScheme: 'https'
+  },
+  android: {
+    allowMixedContent: false,
+    captureInput: true,
+    webContentsDebuggingEnabled: false, // Disable in production
+    backgroundColor: '#1f2937' // Match app background
+  },
+  plugins: {
+    SplashScreen: {
+      launchShowDuration: 2000,
+      backgroundColor: '#1f2937',
+      showSpinner: true,
+      androidSpinnerStyle: 'small',
+      spinnerColor: '#3b82f6'
+    }
   }
 };
 
