@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Header from "@/components/Header";
+import NetworkStatus from "@/components/NetworkStatus";
 import SignalDashboard from "@/components/SignalDashboard";
 import CoinSelector from "@/components/CoinSelector";
 import CoinCards from "@/components/CoinCards";
@@ -37,6 +38,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">
       <Header />
+      <NetworkStatus />
       
       <main className="max-w-7xl mx-auto px-4 py-6 space-y-6">
         {/* Signal Dashboard - Top Priority */}
