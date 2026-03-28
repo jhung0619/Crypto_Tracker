@@ -1,0 +1,171 @@
+═══════════════════════════════════════════════════════════════
+PLAY STORE LISTING - COPY/PASTE READY
+═══════════════════════════════════════════════════════════════
+
+────────────────────────────────────────────────────────────────
+APP NAME
+────────────────────────────────────────────────────────────────
+
+Crypto Tracker
+
+
+────────────────────────────────────────────────────────────────
+SHORT DESCRIPTION (79 characters)
+────────────────────────────────────────────────────────────────
+
+Track Bitcoin, Ethereum & Solana prices with charts, signals & market insights
+
+
+────────────────────────────────────────────────────────────────
+FULL DESCRIPTION
+────────────────────────────────────────────────────────────────
+
+Crypto Tracker provides real-time cryptocurrency market data and insights for Bitcoin (BTC), Ethereum (ETH), and Solana (SOL).
+
+FEATURES
+
+• Real-time price tracking
+  Live prices updated every minute from CoinGecko
+
+• 30-day price trend charts
+  Interactive bar charts showing daily price movements
+  Tap any bar to see exact historical prices
+
+• Moving averages (30/90/240/365 days)
+  Track long-term trends with multiple timeframes
+  Identify support and resistance levels
+
+• Market sentiment indicators
+  Fear & Greed Index from Alternative.me
+  Understand overall market psychology
+
+• Market signals
+  BEARISH/NEUTRAL/BULLISH analysis
+  Based on price trends and moving averages
+  
+• Latest crypto news
+  Stay updated with market developments
+
+WHO IS THIS FOR?
+
+Perfect for crypto investors and traders who want quick market insights on mobile. Whether you're checking prices during the day or analyzing trends before making decisions, Crypto Tracker gives you the essential data you need.
+
+DISCLAIMER
+
+⚠️ IMPORTANT: This app provides market data and informational signals only. 
+
+• Not financial advice
+• Not investment recommendations
+• Not a trading platform
+• Always do your own research
+• Consult a licensed financial advisor before making investment decisions
+
+Signals shown (BEARISH/NEUTRAL/BULLISH) are based on technical indicators and should not be interpreted as buy or sell recommendations.
+
+DATA SOURCES
+
+• Price data: CoinGecko public API
+• Sentiment data: Alternative.me Fear & Greed Index
+• News: Crypto market aggregators
+
+All data is publicly available and provided as-is.
+
+REQUIREMENTS
+
+• Internet connection required
+• Android 5.1 or higher
+• No account needed
+• Free forever
+
+PRIVACY
+
+We do not collect, store, or share any personal information. The app only fetches public market data from third-party APIs. No tracking, no analytics, no data collection.
+
+SUPPORT
+
+Questions or feedback? Email: [YOUR-EMAIL]
+
+---
+
+Crypto Tracker © 2026
+Version 1.0.0
+
+
+────────────────────────────────────────────────────────────────
+CATEGORY & METADATA
+────────────────────────────────────────────────────────────────
+
+Category: Finance
+
+Tags:
+cryptocurrency
+bitcoin
+ethereum
+crypto tracker
+market data
+price tracking
+crypto signals
+btc
+eth
+sol
+
+
+────────────────────────────────────────────────────────────────
+CONTENT RATING
+────────────────────────────────────────────────────────────────
+
+Target Age: 18+
+
+Content Rating Questionnaire Answers:
+• Violence: No
+• Sexual content: No
+• Profanity: No
+• Controlled substances: No
+• Gambling: No
+• User interaction: No
+• User-generated content: No
+• Shares user location: No
+• Shares personal info: No
+
+Expected Rating: Everyone or Teen
+
+
+────────────────────────────────────────────────────────────────
+DATA SAFETY
+────────────────────────────────────────────────────────────────
+
+Does your app collect or share user data?
+NO
+
+Explanation:
+The app only displays public cryptocurrency market data. We do not collect any personal information, device information, or usage data. No accounts, no tracking, no analytics.
+
+
+────────────────────────────────────────────────────────────────
+RELEASE NOTES (First Release)
+────────────────────────────────────────────────────────────────
+
+Initial release of Crypto Tracker
+
+Features:
+• Real-time BTC, ETH, and SOL prices
+• 30-day price trend charts
+• Moving averages (30/90/240/365 days)
+• Market sentiment (Fear & Greed Index)
+• Market signals (BEARISH/NEUTRAL/BULLISH)
+• Latest crypto news
+
+This is the first public release. Feedback welcome!
+
+
+═══════════════════════════════════════════════════════════════
+END OF COPY/PASTE BLOCK
+═══════════════════════════════════════════════════════════════
+
+INSTRUCTIONS:
+1. Open this file
+2. Copy each section when filling Play Console
+3. Replace [YOUR-EMAIL] with your actual email
+4. Paste directly into corresponding fields
+
+All text is ready to use as-is.

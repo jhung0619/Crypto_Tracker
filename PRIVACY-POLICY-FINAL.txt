@@ -1,0 +1,81 @@
+Privacy Policy for Crypto Tracker
+
+Last Updated: March 28, 2026
+
+OVERVIEW
+
+Crypto Tracker ("we", "our", "the app") is committed to protecting your privacy. This policy explains our data practices.
+
+DATA COLLECTION
+
+We DO NOT collect, store, or share any personal information.
+
+The app does not:
+• Require user accounts
+• Track your location
+• Access your contacts
+• Store browsing history
+• Use analytics tools
+• Implement advertising SDKs
+• Collect device identifiers
+• Store any user data
+
+THIRD-PARTY DATA SOURCES
+
+The app fetches public market data from:
+
+1. CoinGecko (https://www.coingecko.com)
+   Purpose: Cryptocurrency prices and market data
+   Data accessed: Public market information only
+   No personal information is sent to this service
+
+2. Alternative.me (https://alternative.me)
+   Purpose: Market sentiment index (Fear & Greed Index)
+   Data accessed: Public sentiment data only
+   No personal information is sent to this service
+
+These third-party services have their own privacy policies. We do not control how they handle network requests.
+
+INTERNET PERMISSION
+
+The app requires internet access to fetch real-time cryptocurrency market data. This is the only system permission required.
+
+INFORMATION DISPLAYED
+
+All information shown in the app is publicly available market data. The app displays:
+• Current cryptocurrency prices
+• Historical price data
+• Market sentiment indicators
+• Technical analysis signals
+• Public news items
+
+None of this information is associated with individual users or stored on our servers.
+
+CHILDREN'S PRIVACY
+
+The app is intended for users age 18 and older due to its financial nature. We do not knowingly collect data from children under 18.
+
+FINANCIAL DISCLAIMER
+
+Market signals and data displayed in the app are for informational purposes only and do not constitute financial advice. The signals shown (BEARISH/NEUTRAL/BULLISH) are based on technical indicators and should not be interpreted as investment recommendations.
+
+Always consult a licensed financial advisor before making investment decisions. Cryptocurrency investments carry significant risk.
+
+DATA SECURITY
+
+Since we do not collect or store any user data, there is no user data to secure. The app simply displays publicly available information fetched in real-time from third-party APIs.
+
+CHANGES TO THIS POLICY
+
+We may update this privacy policy from time to time. Any changes will be posted on this page with an updated "Last Updated" date. We encourage you to review this policy periodically.
+
+CONTACT US
+
+If you have questions about this privacy policy, please contact us:
+
+Email: [YOUR-EMAIL-HERE]
+
+---
+
+Crypto Tracker © 2026
+Version 1.0.0
